@@ -1,0 +1,30 @@
+<%- include('./shared/header')%>
+    <link rel="stylesheet" href="./css/signup.css">
+    <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <div class="container p-5">
+            <div class="main text-center my-2">
+                <div class="text-right">
+                    <a class="btn btn-danger my-2 p-2" href="/auth/logout">logout</a>
+                </div>
+                <h1>Profile Page</h1>
+            </div>
+
+            <div class="form w-75 p-5">
+                <form action="/user/profile/pic" method="POST" enctype="multipart/form-data">
+                    <input class="form-control" type="file" name="image">
+                    <div class="form-group my-2">
+                        <button class="btn btn-info my-2" type="submit">upload</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <%- include('./shared/script')%>
+            <script src="./js/signup.js"></script>
+            <%- include('./shared/footer')%>
